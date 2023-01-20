@@ -15,7 +15,7 @@
 ![model start](https://user-images.githubusercontent.com/96254640/213592113-c3b2edfc-15de-4027-8669-a897ea62620b.png)
 ###### Here we can see an upward trend on the 84119 zip code.  Since the housing market crashed in 2008, we will focus our model from 2008 onward.  Our first attempt at modeling was to use a SARIMAX model from scratch, but then used pmdarima to directly feed the data our raw series. This is because the SARIMAX model automatically does the differencing in our series for us to eliminate any trends or seasonality.
 ![download1](https://user-images.githubusercontent.com/96254640/213593195-e23c0263-98f0-4464-a3cf-c308a902f6da.png)
-###### Here we can see by the histogram, our KDE line somewhat closely follows along the N(0,1) line which is the standard notation for a normal distribution having a mean of 0 and standard deviation of 1. This tells us that the residuals are normally distributed.  Our qq-plot displays that our residuals are following the linear trend line. This tells us that the residuals seen here are normally distributed.  From the Correlogram plot on the bottom left, we see that the time series residuals display low correlations with their lagged versions. This is clearer as we move further along the time series. This tells us there isn't obvious seasonality in our series.
+###### Here we can see by the histogram, our KDE line somewhat closely follows along the N(0,1) line which is the standard notation for a normal distribution having a mean of 0 and standard deviation of 1. This tells us that the residuals are normally distributed.  Our qq-plot displays that our residuals are following the linear trend line. This tells us that the residuals seen here are normally distributed.  From the Correlogram plot on the bottom right, we see that the time series residuals display low correlations with their lagged versions. This is clearer as we move further along the time series. This tells us there isn't obvious seasonality in our series.
 ![84229sarimax](https://user-images.githubusercontent.com/96254640/213596206-ce67d163-def2-40ff-ad38-7ad672fa256b.png)
 ###### Our model was able to forecast a reasonable trend on each of the top zip codes with the highest ROI.
 ## Conclusion
@@ -26,3 +26,12 @@ The top zip codes to invest in are:
 ##### 84119 with a 3 year ROI of 49.6% and a 5 year ROI of 65.53%
 ##### 84106 with a 3 year ROI of 49.49% and a 5 year ROI of 69.11%
 ##### 84401 with a 3 year ROI of 48.59% and a 5 year ROI of 54.39%
+```
+├── .ipynb_checkpoints
+├── .gitattributes
+├── .gitignore
+├── Phase 4 Project.ipynb
+├── Presentation.pdf
+├── README.md
+└── zillow_data.csv
+```
